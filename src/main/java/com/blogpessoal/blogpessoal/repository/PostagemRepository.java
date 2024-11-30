@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import com.blogpessoal.blogpessoal.model.Postagem;
 
@@ -14,6 +15,7 @@ import com.blogpessoal.blogpessoal.model.Postagem;
 * Long: Indica o tipo do ID da entidade Postagem. Nesse caso, o ID da tabela no banco de dados é do tipo Long.
 */
 
+@Repository
 public interface PostagemRepository extends JpaRepository<Postagem, Long>{
 	
 	public List <Postagem> findAllByTituloContainingIgnoreCase(@Param("titulo") String titulo);
