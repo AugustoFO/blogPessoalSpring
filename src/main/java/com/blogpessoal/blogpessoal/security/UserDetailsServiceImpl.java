@@ -7,11 +7,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.blogpessoal.blogpessoal.model.Usuario;
 import com.blogpessoal.blogpessoal.repository.UsuarioRepository;
 
+@Component
 public class UserDetailsServiceImpl implements UserDetailsService{
 
 	@Autowired
